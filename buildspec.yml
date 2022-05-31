@@ -17,4 +17,4 @@ phases:
                         - echo post_build...
 artifacts:
         files:
-                - testapp.war
+                - target/testapp.war
