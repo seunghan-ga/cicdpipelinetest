@@ -1,0 +1,19 @@
+version: 0.0
+
+phases:
+        install:
+                runtime-versions:
+                        java: corretto11
+        pre_build:
+                commands:
+                        - echo pre_buile...
+        build:
+                commands:
+                        - echo build...
+                        - mvn install
+        post_build:
+                commands:
+                        - echo post_build...
+artifacts:
+        files:
+                - target/testapp-0.1.war
