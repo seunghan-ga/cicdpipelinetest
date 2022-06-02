@@ -1,6 +1,6 @@
 version: 0.0
 os: linux
 files:
-  - source: ./testapp-0.1.war
+  - source: /target/testapp-0.1.war
     destinaion: /home/ubuntu/opt/tomcat9/webapps
 
