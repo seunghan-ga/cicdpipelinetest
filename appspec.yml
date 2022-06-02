@@ -4,4 +4,4 @@ os: linux
 
 files:
   - source: / 
-    destinaion: /home/ubuntu/opt/tomcat9/webapps 
+    destination: /home/ubuntu/opt/tomcat9/webapps 
