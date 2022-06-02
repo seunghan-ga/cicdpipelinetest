@@ -19,5 +19,5 @@ artifacts:
         files:
                 - appspec.yml
                 - target/testapp-0.1.war
-		- scripts/before-install.sh
+                - scripts/before-install.sh
         discard-paths: yes
