@@ -17,6 +17,6 @@ phases:
                         - echo post_build...
 artifacts:
         files:
-                - target/testapp-0.1.war
                 - appspec.yml
+                - target/testapp-0.1.war
         discard-paths: yes
