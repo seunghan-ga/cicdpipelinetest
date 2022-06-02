@@ -18,5 +18,5 @@ phases:
 artifacts:
         files:
                 - target/testapp-0.1.war
-                - target/appspec.yml
+                - appspec.yml
         discard-paths: yes
