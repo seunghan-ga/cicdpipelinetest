@@ -1,5 +1,7 @@
 version: 0.0
+
 os: linux
+
 files:
-  - source: /
-    destinaion: /home/ubuntu/opt/tomcat9/webapps
+  - source: / 
+    destinaion: /home/ubuntu/opt/tomcat9/webapps 
