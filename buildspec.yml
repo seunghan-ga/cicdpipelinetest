@@ -13,12 +13,12 @@ phases:
                 commands:
                         - echo build...
                         - mvn install
-                        - docker build -t tomcat-test:1 .
-                        - docker tag tomcat-test:1 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:1
+                        - docker build -t tomcat-test .
+                        - docker tag tomcat-test 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test
         post_build:
                 commands:
                         - echo post_build...
-                        - docker push 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:1
+                        - docker push 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test
 artifacts:
         files:
                 - appspec.yml
