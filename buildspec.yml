@@ -8,13 +8,19 @@ phases:
                 commands:
                         - echo pre_buile...
                         - sudo apt-get update && sudo apt-get install -y maven
+                        - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 
+100450219031.dkr.ecr.ap-northeast-2.amazonaws.com
+  build:
         build:
                 commands:
                         - echo build...
                         - mvn install
+                        - docker build -t tomcat-test:1 .
+                        - docker tag tomcat-test:1 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:1
         post_build:
                 commands:
                         - echo post_build...
+                        - docker push 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:1
 artifacts:
         files:
                 - appspec.yml
