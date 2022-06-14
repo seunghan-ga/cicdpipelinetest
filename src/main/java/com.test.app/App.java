@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class App {
     @RequestMapping("/hello")
     String home() {
-        return "Hello World! test_app! 7777";
+        return "Hello World! test_app! 8888";
     }
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
