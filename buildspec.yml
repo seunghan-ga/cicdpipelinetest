@@ -19,8 +19,7 @@ phases:
                 commands:
                         - echo post_build...
                         - docker push 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test
-                        - printf '[{"name":"test-container", "imageUri":"%s"}]' 
-100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:latest > imageDetail.json
+                        - printf '[{"name":"test-container", "imageUri":"%s"}]' 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:latest > imageDetail.json
 artifacts:
         files:
                 - appspec.yml
