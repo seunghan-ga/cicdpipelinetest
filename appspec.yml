@@ -1,10 +1,17 @@
 version: 0.0
 
-Resources:
-  - TargetService:
-      Type: AWS::ECS::Service
-      Properties:
-        TaskDefinition: "arn:aws:ecs:ap-northeast-2:100450219031:task-definition/test-task:4"
-        LoadBalancerInfo:
-          ContainerName: "test-container"
-          ContainerPort: 8080
+os: linux
+
+files:
+  - source: ./testapp-0.1.war
+    destination: /home/ubuntu/opt/tomcat9/webapps 
+
+hooks:
+  BeforeInstall:
+    - location: ./before-install.sh
+      timeout: 60
+      runas: root
+  AfterInstall:
+    - location: ./after-install.sh
+      timeout: 60
+      runas: root
