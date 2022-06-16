@@ -1,13 +1,13 @@
 {
-    "executionRoleArn": "arn:aws:iam::100450219031:role/sacle-ecs-task-iam-role",
+    "executionRoleArn": "arn:aws:iam::100450219031:role/sacle-dev-ecs-iam-role",
     "containerDefinitions": [
         {
-            "name": "test-container",
-            "image": "100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:latest",
+            "name": "testapp",
+            "image": "<IMAGE1_NAME>",
             "essential": true,
             "portMappings": [
                 {
-                    "hostPort": 8080,
+                    "hostPort": 0,
                     "protocol": "tcp",
                     "containerPort": 8080
                 }
@@ -17,8 +17,8 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "networkMode": "host",
+    "networkMode": "bridge",
     "cpu": "256",
     "memory": "512",
-    "family": "test-task"
+    "family": "test-task-01"
 }
