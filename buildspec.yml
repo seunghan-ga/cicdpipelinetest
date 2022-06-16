@@ -13,13 +13,13 @@ phases:
                 commands:
                         - echo build...
                         - mvn install
-                        - docker build -t tomcat-test .
-                        - docker tag tomcat-test 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test
+                        - docker build -t testapp .
+                        - docker tag testapp 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/testapp
         post_build:
                 commands:
                         - echo post_build...
-                        - docker push 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test
-                        - printf '[{"name":"test-container", "imageUri":"%s"}]' 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/tomcat-test:latest > imageDetail.json
+                        - docker push 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/testapp
+                        - printf '[{"name":"test-container", "imageUri":"%s"}]' 100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/testapp:latest > imageDetail.json
 artifacts:
         files:
                 - appspec.yml
