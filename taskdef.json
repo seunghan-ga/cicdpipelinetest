@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "testapp",
-            "image": "<IMAGE1_NAME>",
+            "image": "100450219031.dkr.ecr.ap-northeast-2.amazonaws.com/testapp:latest",
             "essential": true,
             "portMappings": [
                 {
