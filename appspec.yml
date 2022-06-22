@@ -4,4 +4,6 @@ os: linux
 
 files:
   - source: ./testapp-0.1.war
-    destination: /home/ubuntu
+    destination: /var/www/html/home
+  - source: ./index.html
+    destination: /var/www/html/home
