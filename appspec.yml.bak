@@ -1,0 +1,18 @@
+version: 0.0
+
+os: linux
+
+files:
+  - source: ./testapp-0.1.war
+    destinaion: ~/
+#    destination: /home/ubuntu/opt/tomcat9/webapps 
+
+#hooks:
+#  BeforeInstall:
+#    - location: ./before-install.sh
+#      timeout: 60
+#      runas: root
+#  AfterInstall:
+#    - location: ./after-install.sh
+#      timeout: 60
+#      runas: root
