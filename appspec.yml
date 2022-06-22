@@ -4,6 +4,4 @@ os: linux
 
 files:
   - source: ./testapp-0.1.war
-    destination: /var/www/html/home
-  - source: ./index.html
-    destination: /var/www/html/home
+    destination: /opt/apache-tomcat-8.5.51/webapps
