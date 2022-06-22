@@ -5,3 +5,13 @@ os: linux
 files:
   - source: ./testapp-0.1.war
     destination: /opt/apache-tomcat-8.5.51/webapps
+
+hooks:
+  BeforeInstall:
+    - location: ./before-install.sh
+      timeout: 60
+      runas: root
+  AfterInstall:
+    - location: ./after-install.sh
+      timeout: 60
+      runas: root
